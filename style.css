@@ -1,0 +1,48 @@
+body {
+    background-color: #000;
+    color: #00ff00;
+    font-family: monospace;
+    margin: 0;
+    overflow: hidden; /* Hide scrollbars */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-end; /* Push terminal to bottom */
+    padding: 10px;
+}
+
+#terminal {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    word-wrap: break-word; /* Prevent long lines from overflowing */
+}
+
+#commandInput {
+    background-color: #000;
+    color: #00ff00;
+    border: none;
+    outline: none;
+    font-family: monospace;
+    font-size: 1em;
+    padding: 5px;
+    width: 100%;
+}
+
+.prompt {
+    margin: 0;
+    display: inline; /* Important for cursor position */
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
